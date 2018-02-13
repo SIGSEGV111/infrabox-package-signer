@@ -1,0 +1,23 @@
+{
+	"jobs" : [
+		{
+			"name" : "infrabox-rpm-signer",
+			"type" : "docker",
+			"build_only" : true,
+			"resources" : {
+				"limits" : { "memory" : 1024, "cpu" : 1 }
+			},
+			"docker_file" : "rpm/Dockerfile"
+		},
+		{
+			"name" : "infrabox-deb-signer",
+			"type" : "docker",
+			"build_only" : true,
+			"resources" : {
+				"limits" : { "memory" : 1024, "cpu" : 1 }
+			},
+			"docker_file" : "deb/Dockerfile"
+		}
+	],
+	"version":1
+}
